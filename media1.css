@@ -1,0 +1,141 @@
+
+.parent {
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    align-items: center;
+}
+
+.child1 {
+    display: flex;
+    gap: 30px;
+}
+
+.input-checkbox {
+    display: none;
+}
+
+.ham-icon {
+    display: none;
+}
+
+@media screen and (max-width: 400px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    .parent {
+        display: flex;
+        position: relative;
+        padding: 10px;
+    }
+
+    .child1 {
+        display: none;
+        position: absolute;
+        gap: 10px;
+        align-items: center;
+        color: white;
+        top: 80px;
+        left: 0px;
+        width: 100%;
+        background-color:#444 ;
+        
+    }
+
+    .ham-icon {
+        display: block;
+    }
+
+    .input-checkbox:checked + .child1 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+    .parent {
+        display: flex;
+        position: relative;
+        padding: 10px;
+    }
+
+    .child1 {
+        display: none;
+        position: absolute;
+        gap: 10px;
+        align-items: center;
+        top: 70px;
+        left: 0px;
+        color: white;
+        width: 100%;
+        background-color: #444;
+         
+    }
+
+    .ham-icon {
+        display: block;
+    }
+
+    .ham-icon:hover {
+        cursor: pointer;
+    }
+
+    .input-checkbox:checked + .child1 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .parent {
+        padding: 10px;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .child1 {
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    * {
+        font-family: cursive;
+        font-weight: 600;
+    }
+
+    .parent {
+        font-size: 2.0rem;
+    }
+
+    .child1 {
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .child1 span {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 2560px) {
+    * {
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+
+    .parent {
+        font-size: 2.3rem;
+    }
+
+    .child1 {
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .child1 span {
+        font-size: 1.6rem;
+    }
+} 
